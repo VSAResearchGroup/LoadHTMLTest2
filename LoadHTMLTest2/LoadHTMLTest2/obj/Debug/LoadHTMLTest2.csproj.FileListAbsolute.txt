@@ -1,0 +1,12 @@
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\bin\Debug\LoadHTMLTest2.exe.config
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\bin\Debug\LoadHTMLTest2.exe
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\bin\Debug\LoadHTMLTest2.pdb
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\obj\Debug\LoadHTMLTest2.Form1.resources
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\obj\Debug\LoadHTMLTest2.Properties.Resources.resources
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\obj\Debug\LoadHTMLTest2.csproj.GenerateResource.Cache
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\obj\Debug\LoadHTMLTest2.exe
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\obj\Debug\LoadHTMLTest2.pdb
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\bin\Debug\HtmlAgilityPack.dll
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\bin\Debug\HtmlAgilityPack.pdb
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\bin\Debug\HtmlAgilityPack.xml
+c:\users\tungl\onedrive\documents\visual studio 2017\Projects\LoadHTMLTest2\LoadHTMLTest2\obj\Debug\LoadHTMLTest2.csprojResolveAssemblyReference.cache
