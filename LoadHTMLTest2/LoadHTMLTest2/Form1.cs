@@ -35,9 +35,9 @@ namespace LoadHTMLTest2
             HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();      //Declare a new HTML document object
             HtmlAgilityPack.HtmlWeb web = new HtmlAgilityPack.HtmlWeb();                //Delcare a new HTML web object
 
-            for (int pageNum = 1; pageNum <= 5; pageNum++) //Declare the number of HTML file for running through a list
+            for (int pageNum = 30; pageNum <= 30; pageNum++) //Declare the number of HTML file for running through a list
             {
-                doc = web.Load("C:/Users/tungl/Downloads/CSS499/All_Plans/"+pageNum+".html");       //This is where we load HTML link (local file)
+                doc = web.Load("C:/Users/tungl/Downloads/CSS499/All_Plans_01_25_18/"+pageNum+".html");       //This is where we load HTML link (local file)
 
                 String courseNumber = "";                   //Declare course Number variable
                 String quarterPlanTitle = "";               //Declare quarter Plan Title
@@ -237,13 +237,13 @@ namespace LoadHTMLTest2
                             foreach (char z in val)
                             {
                                 if (!z.Equals('/'))                 //only read the first course Number, co-requisite would not be considered in this case
-                                    courseNumber += z;
+                                    courseNumber += Char.ToUpper(z);
                                 else
                                     break;
                             }
-                            //MessageBox.Show(courseNumber);
+                            MessageBox.Show(courseNumber);
                             //ADD a new StudyPlan
-                            string query5 = "insert into StudyPlan(PlanID,QuarterID,YearID,CourseID,DateAdded,LastDateModified) select GeneratedPlan.ID,Quarter.QuarterID,YearID = 2016,course.CourseID,DateAdded = CURRENT_TIMESTAMP, LastDateModified = CURRENT_TIMESTAMP from GeneratedPlan,Quarter,course where GeneratedPlan.ID IN (select GeneratedPlan.ID from GeneratedPlan where ParameterSetID IN ( select ParameterSet.ID from ParameterSet where MajorID IN (select Major.ID from Major where Major.Name = '" + Major + "') AND SchoolID IN (select School.ID from School where School.Acronymn = '" + School + "') AND JobTypeID IN (select JobType.ID from JobType where JobType.JobType = '" + JobType + "') AND TimePreferenceID IN (select TimePreference.ID from TimePreference where TimePreference.TimePeriod = '" + TimePreference + "') AND QuarterPreferenceID IN (Select Quarter.QuarterID from Quarter where Quarter.Quarter = '" + StartQuarter + "')AND SummerPreference = '" + SummerPreference + "' AND EnrollmentType IN (select EnrollmentType.ID from EnrollmentType where EnrollmentType.EnrollmentDescription = '" + EnrollmentType + "'))) AND Quarter.QuarterID IN (select Quarter.QuarterID from Quarter where Quarter.Quarter = '" + quarter + "') AND course.CourseID IN (select course.CourseID from course where course.CourseNumber= '" + courseNumber + "'); ";
+                            string query5 = "insert into StudyPlan(PlanID,QuarterID,YearID,CourseID,DateAdded,LastDateModified) select GeneratedPlan.ID,Quarter.QuarterID,YearID = "+year+",course.CourseID,DateAdded = CURRENT_TIMESTAMP, LastDateModified = CURRENT_TIMESTAMP from GeneratedPlan,Quarter,course where GeneratedPlan.ID IN (select GeneratedPlan.ID from GeneratedPlan where ParameterSetID IN ( select ParameterSet.ID from ParameterSet where MajorID IN (select Major.ID from Major where Major.Name = '" + Major + "') AND SchoolID IN (select School.ID from School where School.Acronymn = '" + School + "') AND JobTypeID IN (select JobType.ID from JobType where JobType.JobType = '" + JobType + "') AND TimePreferenceID IN (select TimePreference.ID from TimePreference where TimePreference.TimePeriod = '" + TimePreference + "') AND QuarterPreferenceID IN (Select Quarter.QuarterID from Quarter where Quarter.Quarter = '" + StartQuarter + "')AND SummerPreference = '" + SummerPreference + "' AND EnrollmentType IN (select EnrollmentType.ID from EnrollmentType where EnrollmentType.EnrollmentDescription = '" + EnrollmentType + "'))) AND Quarter.QuarterID IN (select Quarter.QuarterID from Quarter where Quarter.Quarter = '" + quarter + "') AND course.CourseID IN (select course.CourseID from course where course.CourseNumber= '" + courseNumber + "'); ";
                             cmd = new SqlCommand(query5, con);       //create a new command by query through the connection
                             SqlDataReader myreader5;                 //Declare a new SQL data reader
                             try

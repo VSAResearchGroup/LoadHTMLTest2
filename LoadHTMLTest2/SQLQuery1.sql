@@ -3,10 +3,16 @@ insert into JobType values('Full Time',40,1);
 insert into JobType values('Part Time',20,1);
 insert into JobType values('Unemployed',0,1);
 
+delete from JobType
+where JobType.ID = 6;
+
 select * from TimePreference;
 insert into TimePreference(TimePeriod,Status) values('Morning',1);
 insert into TimePreference(TimePeriod,Status) values('Afternoon',1);
 insert into TimePreference(TimePeriod,Status) values('Evening',1);
+
+delete from TimePreference
+where ID >= 5;
 
 CREATE table EnrollmentType(
 	ID	int NOT NULL,
@@ -20,6 +26,8 @@ insert into EnrollmentType values(2,'Part Time');
 
 select * from Quarter;
 
+select * from major;
+
 select * from School;
 delete from School 
 where ID = 5;
@@ -27,8 +35,17 @@ insert into School(Name,Acronymn,Address) values ('University of Washington Both
 
 select * from Course;
 
+select Course.CourseNumber from Course
+where Course.CourseID = 520;
+
 select Course.CourseID from Course
-where Course.CourseNumber = 'ENGL 230';
+where Course.CourseNumber = 'FRCH 122';
+
+select * from PlanRatingDescription;
+insert into PlanRatingDescription values('Too many electives');
+
+select PlanRatingDescription.ID from PlanRatingDescription
+where PlanRatingDescription.Description = 'too many electives';
 
 select * from ParameterSet;
 delete from ParameterSet
@@ -448,3 +465,5 @@ where
 		where
 			Description = 'Too long'
 	);
+
+	
